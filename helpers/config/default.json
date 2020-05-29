@@ -1,0 +1,6 @@
+{
+    "TokenSecret" : "secretkey",
+    "TokenLife" : "1d",
+    "RefreshTokenSecret" : "refreshsecretkey",
+    "RefreshTokenLife" : "30d"
+}
