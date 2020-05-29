@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    RED.nodes.registerType('odata',{
+        category: 'cyg',
+        color: '#d24714',
+        defaults: {
+            name: {value:""},
+            user: {value:""},
+            password: {value:""},
+            server: {value:""},
+            database: {value:""},
+			returntype: {value:"json"},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "web.png",
+        label: function() {
+            return this.name||"odata";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="odata">
+    <div class="form-row">
+        <label for="node-input-name">Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-user">User</label>
+        <input type="text" id="node-input-user" placeholder="User">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password">Password</label>
+        <input type="text" id="node-input-password" placeholder="Password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server">Server</label>
+        <input type="text" id="node-input-server" placeholder="Server Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-database">Database</label>
+        <input type="text" id="node-input-database" placeholder="Database Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-returntype">Return</label>
+        <select name="node-input-returntype" id="node-input-returntype">
+            <option value="utf8">XML </option>
+            <option value="utf8">a UTF-8 string</option>
+            <option value="json">a parsed JSON object</option>
+        </select>
+    <div>
+</script>
+
+<script type="text/html" data-help-name="odata">
+    <p>A node that Craetes an Odata service (Odata Complaint API) using SQL Server Datsbase</p>
+</script>
